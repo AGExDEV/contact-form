@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- 
+    target: _blank; _self; _parent; _top; framename
+    method: always POST
+-->
+<form class="wrapper" action="" target="_blank" method="POST" autocomplete="on" name="Contact">  
+    
+    <!--name -->
+    <p class="name">Your Name</p>
+    <label for="fname" class="sr-only">first name</label>
+    <input class="name" type="text" name="fname" id="fname" placeholder="First Name" required autofocus>
+    <label for="lname" class="sr-only">last name</label>
+    <input class="name" type="text" name="lname" id="lname" placeholder="Last Name">
+    
+    <!--contact-->
+    <label for="email">Your Email</label>
+    <input type="email" name="email" id="email">
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" id="phone" required> 
+    
+    <!--MESSAGE SUBJECT-->
+    <label for="msg-subject">Message Subject</label>
+
+    <!--MESSAGE SUBJECT drop down. list att. and datalist-id must match -->
+    <input  list="msg-subjects" name="msg-subject" id="msg-subject" required>
+        <datalist id="msg-subjects">  
+            <option value="HTML"></option>
+            <option value="CSS"></option>
+            <option value="JS"></option>
+        </datalist>
+    
+    <!--text area-->
+    <label for="msg-text">Message</label>
+    <textarea name="msg-text" id="msg-text" rows="10" cols="50" required>
+    </textarea>
+    
+    <!--verification-->
+    <div class="robot">
+    <p>are you human or "other"</p>
+    <label  class="lverify" for="robot">Other</label>
+    <input type="radio" id="robot" name="Verification">
+    <label  class="rverify" for="human">Human</label>
+    <input type="radio" name="Verification" id="human">
+    <br><br><input type="submit" >
+    </div>
+    <!--submit
+    <input type="submit" > -->
+</form>   
+
+
+
+
+<footer>
+  <!-- elements have to exist before JS can interact with them -->
+  <script src="script.js"></script>     
+</footer>
+</body>
+</html>
